@@ -7,7 +7,7 @@ import (
 	"runtime"
 	"sync"
 
-	. "github.com/cascad/goloot/data_structs"
+	ds "github.com/cascad/goloot/data_structs"
 	"github.com/cascad/goloot/erlang"
 	"github.com/cascad/goloot/helpers"
 	"github.com/cascad/goloot/logic"
@@ -15,8 +15,8 @@ import (
 	"github.com/go-redis/redis"
 )
 
-func Dev1(runner func(int, int, int, *[]string, *Aggregate)) {
-	var agg Aggregate
+func Dev1(runner func(int, int, int, *[]string, *ds.Aggregate)) {
+	var agg ds.Aggregate
 	agg.Wg = sync.WaitGroup{}
 
 	numProc := flag.Int("p", 1, "core num, default=1")
@@ -74,9 +74,9 @@ func Dev1(runner func(int, int, int, *[]string, *Aggregate)) {
 	log.Println(agg.Check(), agg.Requested(), agg.Processed(), agg.Success(), agg.Failed())
 }
 
-func Prod(runner func(int, int, int, *[]string, *Aggregate)) {
+func Prod(runner func(int, int, int, *[]string, *ds.Aggregate)) {
 	// go run app.go -f utest.txt -c 1
-	var agg Aggregate
+	var agg ds.Aggregate
 	agg.Wg = sync.WaitGroup{}
 
 	numProc := flag.Int("p", 1, "core num, default=1")

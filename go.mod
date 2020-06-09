@@ -4,7 +4,6 @@ go 1.14
 
 require (
 	github.com/bkaradzic/go-lz4 v1.0.0
-	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b
 	github.com/go-redis/redis v6.15.7+incompatible
 	github.com/niemeyer/pretty v0.0.0-20200227124842-a10e7caefd8e // indirect
 	github.com/onsi/ginkgo v1.12.0 // indirect

@@ -1,11 +1,10 @@
 package main
 
 import (
-	"github.com/cascad/goloot/parsers"
-	"github.com/cascad/goloot/stats_local"
 	"encoding/csv"
 	"fmt"
-	"github.com/bradfitz/gomemcache/memcache"
+	"github.com/cascad/goloot/parsers"
+	"github.com/cascad/goloot/stats_local"
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
 	"log"
@@ -156,12 +155,12 @@ func CalcSave(item string, v *[]float64, filename string) {
 //	}
 //}
 
-func main_old() {
+func mainOld() {
 	resultFilename := os.Args[1]
 	collection := os.Args[2]
 	//resultFilename := "result.csv"
 	mongoHost := "127.0.0.1"
-	mmc := memcache.New("127.0.0.1")
+	// mmc := memcache.New("127.0.0.1")
 
 	var err = os.Remove(resultFilename)
 

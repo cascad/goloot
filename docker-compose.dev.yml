@@ -15,10 +15,9 @@ services:
     container_name: loot2
 
     volumes:
-    - type: bind
-      source: /home/cascad/repo/goloot
-      target: /src/app
+      - type: bind
+        source: /home/cascad/repo/goloot
+        target: /src/app
 
     command: sleep 9999999 # ./runner
-#    restart: always
 

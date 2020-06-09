@@ -1,13 +1,13 @@
 package main
 
 import (
-	"github.com/cascad/goloot/parsers"
 	"encoding/json"
+	"github.com/cascad/goloot/parsers"
 	"io/ioutil"
 	"log"
 )
 
-func main_() {
+func main1() {
 	//fn:= os.Args[1]
 	//fn := "test_data/test_data_2.json"
 	fn := "test_data/test_data_2.json"
